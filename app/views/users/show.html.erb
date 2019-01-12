@@ -1,2 +1,7 @@
-<%= @user.name %>, <%= @user.email %>
-<%= @user.created_at %>, <%= @user.updated_at %>
+<% provide(:title, @user.name) %>
+
+<h1>
+  <%= gravatar_for @user %>
+  <%= @user.name %>
+</h1>
+
